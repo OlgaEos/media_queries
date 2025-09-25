@@ -12,6 +12,28 @@ h1 {
 .container {
     max-width: 1024px;
     border: 1px solid red;
+
+
+
+:root {
+    --box-bg: lightgray;
+    --text-color: black;
+}
+
+.box {
+    background: var(--box-bg);
+    color: var(--text-color);
+    padding: 1rem;
+    margin: 1rem;
+}
+
+/* переопределение  */
+.card {
+    --box-bg: lightblue;
+    --text-color: darkblue;
+}
+
+
 }
 .block {
     color: #ff0101;
