@@ -9,3 +9,31 @@ h1 {
     color: #333;
     text-align: center;
 }
+
+.block {
+    color: #ff0101;
+    font-size: 20px;
+}
+
+@media (max-width: 768px) {
+    .block {
+        color: blue;
+        font-size: 10px;
+        background-color: aqua;
+    }
+}
+@media (max-width: 640px) {
+    section {
+       flex-direction: column;
+    }
+}
+
+ section {
+        display: flex;
+    }
+
+section p {
+    padding: 15px;
+    margin: 15px;
+    border: 1px solid #ff0101;
+}
