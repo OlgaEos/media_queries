@@ -12,7 +12,7 @@ h1 {
 .container {
     max-width: 1024px;
     border: 1px solid red;
-
+}
 
 
 :root {
@@ -28,13 +28,11 @@ h1 {
 }
 
 /* переопределение  */
-.card {
+.cards {
     --box-bg: lightblue;
     --text-color: darkblue;
 }
 
-
-}
 .block {
     color: #ff0101;
     font-size: 20px;
