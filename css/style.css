@@ -9,7 +9,10 @@ h1 {
     color: #333;
     text-align: center;
 }
-
+.container {
+    max-width: 1024px;
+    border: 1px solid red;
+}
 .block {
     color: #ff0101;
     font-size: 20px;
