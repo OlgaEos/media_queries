@@ -11,140 +11,41 @@ h1 {
 }
 .container {
     max-width: 1024px;
-    border: 1px solid red;
-    background-color: aqua;
+    margin: 0 auto;
+}
+.flex {
+    display: flex;
 }
 
 
 :root {
-    --box-bg: lightgray;
-    --text-color: black;
+    --box-bg: rgb(153, 207, 238); /*цвет фона карточки*/
+    --text-color: black; /*цвет текста*/
+    --text-accent: rgb(251, 251, 251); /*цвет текста*/
+    --accent-color: rgb(28, 13, 242); /*цвет кнопки*/
 }
 
-.box {
-    background: var(--box-bg);
+.card {
     color: var(--text-color);
-    padding: 1rem;
-    margin: 1rem;
+    background: var(--box-bg);
+    padding: 10px;
+    margin: 0 auto;
+}
+
+button {
+    background-color: var(--accent-color);
+    color: var(--text-accent);
+}
+
+.card:nth-child(2) {
+    --box-bg: red;
+    --text-color: white;
 }
 
 /* переопределение  */
-.cards {
+.carddd {
     --box-bg: lightblue;
     --text-color: darkblue;
 }
 
-.block {
-    color: #ff0101;
-    font-size: 20px;
-}
 
- section {
-        display: flex;
-    }
-
-@media (max-width: 600px) {
-    .card {
-        width: 90%;
-    }
-    .card-name {
-        font-size: 18px;
-        color:#ff0101
-    }
-    .card-desckiption {
-        font-size: 14px;
-    }
-    .card button {
-        padding: 5px 10px;
-        background-color: blue;
-    }
-    section {
-        flex-direction: column;
-    }
-}
-
-@media (max-width: 600px) and (orientation: portrait) {
-    .card {
-        background-color: aquamarine;
-    }
-}
-
-@media (max-width: 600px) and (orientation: landscape) {
-    .card {
-        background-color: blueviolet;
-    }
-}
-
-@media (max-width: 400px) {
-    .card-desckiption {
-        display: none;
-    }
-}
-
-@media (min-width: 601px) and (max-width: 1024) {
-   .card {
-    width: 80%;
-   }
-   .card-name {
-    font-size: 20px;
-    color: green;
-   }
-   .card-desckiption {
-    font-size: 15px;
-   }
-}
-
-
-
-
-/* section p {
-    padding: 15px;
-    margin: 15px;
-    border: 1px solid #ff0101;
-} */
-
-.card {
-    width: 300px;
-    margin: 10px;
-    border: 1px solid #ff0101;
-    border-radius: 25px;
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
-}
-.card div {
-    margin: 10px;
-
-}
-.card img {
-    width: 100%;
-   
-}
-.card-name {
-    font-weight: 600;
-    font-size: 24px;
-  
-
-}
-.card-desckiption {
-    font-size: 16px;
-    color:#090909;
-  
-
-}
-
-button {
-    color: white;
-    background-color: #ff0101;
-   
-    padding: 14px 30px;
-    border-radius: 10px;
-    text-align: center;
-margin-left: auto;
-display: block;
-    cursor: pointer;
-    border: none; 
-}
-button:hover {
-    color: black;
-}
