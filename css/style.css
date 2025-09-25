@@ -12,6 +12,7 @@ h1 {
 .container {
     max-width: 1024px;
     border: 1px solid red;
+    background-color: aqua;
 }
 
 
