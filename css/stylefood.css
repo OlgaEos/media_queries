@@ -1,0 +1,19 @@
+:root {
+    --bg: #f7e8b4;
+}
+
+body {
+    background-color: var(--bg);
+}
+.container {
+    width: 1024px;
+    margin: 0 auto;
+    border: 1px solid red;
+  
+}
+menu {
+    display: flex;
+    gap: 10px;
+    justify-content: space-evenly;
+    border: solid;
+}
