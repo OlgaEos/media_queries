@@ -12,6 +12,7 @@ h1 {
 .container {
     max-width: 1024px;
     margin: 0 auto;
+    border: 1px solid red;
 }
 .flex {
     display: flex;
@@ -25,6 +26,13 @@ h1 {
     --accent-color: rgb(28, 13, 242); /*цвет кнопки*/
 }
 
+
+menu {
+    display: flex;
+}
+
+
+
 .card {
     color: var(--text-color);
     background: var(--box-bg);
@@ -32,10 +40,24 @@ h1 {
     margin: 0 auto;
 }
 
-button {
+.btn {
     background-color: var(--accent-color);
     color: var(--text-accent);
+    padding: 8px 14px;
+    border: none;
 }
+
+.btn--smal {
+border-radius: 25px;
+}
+.btn--larg {
+
+}
+
+/* button {
+    background-color: var(--accent-color);
+    color: var(--text-accent);
+} */
 
 .card:nth-child(2) {
     --box-bg: red;
