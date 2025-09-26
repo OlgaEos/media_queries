@@ -10,10 +10,27 @@
 --text-accent: #fff;
 --btn-color: #222;
 }
+.dark {
+     /* --background-color: #000673;
+    --text-color: rgb(255, 255, 255); 
+    --title-color: rgb(246, 2, 2);
+    --linc-color: #03faf2;
+    --card-bg: rgb(14, 235, 3);
+    --box-bg: rgb(22, 67, 217);
+    --accent-color: #03faf2;
+    --text-accent: #222;
+    --btn-color: #03faf2; */
+}
 
+#theme-switch:checked ~ * {
+    --background-color: #000;
+    --text-color: rgb(255, 255, 255); 
+    --title-color: rgb(246, 2, 2);
+     --card-bg: rgb(14, 235, 3);
+}
 /* dark theme when checkbox is checked */
 .theme-root:has(#theme-switch:checked) {
-    --background-color: #333ce8;
+    --background-color: #000673;
     --text-color: rgb(255, 255, 255); 
     --title-color: rgb(246, 2, 2);
     --linc-color: #03faf2;
@@ -44,7 +61,7 @@ h1 {
 /* для контейнера у которого есть дочерний класс .card */
 .container:has(.card) {
     padding: 20px;
-    background-color: antiquewhite;
+    background-color:var(--background-color);
 }
 .flex {
     display: flex;
