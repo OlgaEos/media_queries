@@ -45,6 +45,9 @@ button {
     --box-bg: red;
     --text-color: white;
 }
+.card:nth-child(2) button {
+--btn-color: green;
+}
 
 /* переопределение  */
 .carddd {
