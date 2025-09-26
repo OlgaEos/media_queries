@@ -1,29 +1,114 @@
+/* light */
+:root {
+     --background-color: #e28d8d; 
+     --text-color: black; 
+     --title-color: rgb(1, 100, 1); 
+     --linc-color: #ff0000;
+--card-bg: rgb(3, 158, 248);
+--box-bg: rgb(3, 158, 248);
+--accent-color: #2196F3;
+--text-accent: #fff;
+--btn-color: #222;
+}
+
+/* dark theme when checkbox is checked */
+.theme-root:has(#theme-switch:checked) {
+    --background-color: #333ce8;
+    --text-color: rgb(255, 255, 255); 
+    --title-color: rgb(246, 2, 2);
+    --linc-color: #03faf2;
+    --card-bg: rgb(14, 235, 3);
+    --box-bg: rgb(22, 67, 217);
+    --accent-color: #03faf2;
+    --text-accent: #222;
+    --btn-color: #03faf2;
+}
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 20px;
-    background-color: #f4f4f4;
+    background-color: var(--background-color); 
+    color: var(--text-color);
+    
 }
 
 h1 {
-    color: #333;
+    color: var(--title-color); 
     text-align: center;
 }
 .container {
     max-width: 1024px;
-    margin: 0 auto;
-  
+    /* margin: 0 auto; */
+}
+/* для контейнера у которого есть дочерний класс .card */
+.container:has(.card) {
+    padding: 20px;
+    background-color: antiquewhite;
 }
 .flex {
     display: flex;
+    gap: 20px;
+}
+.easy {
+border: 1px solid #333;
+align-items: center;
 }
 
-:root {
-    --box-bg: rgb(153, 207, 238); /*цвет фона карточки*/
-    --text-color: black; /*цвет текста*/
-    --text-accent: rgb(251, 251, 251); /*цвет текста*/
-    --accent-color: rgb(28, 13, 242); /*цвет кнопки*/
-    --btn-color: green;
+
+.theme-toggle {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+    margin: 20px;
+}
+.theme-toggle input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    border-radius: 34px;
+    transition: 0.3s;
+}
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    border-radius: 50%;
+    transition: 0.3s;
+}
+/* Стили при включенном чекбоксе */
+input:checked + .slider {
+    background-color: #2196F3; /* Цвет переключателя в темной теме */
+}
+
+input:checked + .slider:before {
+    transform: translateX(26px); /* Сдвиг ползунка вправо */
+}
+
+
+
+
+.block {
+    display: inline-block;
+  
+    height: 100px;
+    width: 30%;
+    border: 1px solid saddlebrown;
 }
 
 menu {
@@ -45,17 +130,12 @@ menu {
 }
 
 .card:nth-child(2) {
-    --box-bg: red;
+    --box-bg: rgb(250, 66, 198);
     --text-color: white;
 }
 .card:nth-child(2) button {
 background-color: var(--btn-color);
 }
 
-/* переопределение  */
-.carddd {
-    --box-bg: lightblue;
-    --text-color: darkblue;
-}
 
 
